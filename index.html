@@ -9,28 +9,44 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: white;
-      background: linear-gradient(white, rgba(255, 255, 0, 0.2), rgba(0, 255, 0, 0.2), rgba(0, 0, 255, 0.2));
-      background-size: cover;
+      background-color: black;
     }
 
     .banner {
       text-align: center;
-      padding: 100px 0;
+      padding: 50px 0;
     }
 
     .titulo-grande {
       font-size: 3em;
-      color: black;
+      color: #0ff;
+      animation: zoomInOut 3s infinite;
+      text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff, 0 0 40px #0ff, 0 0 50px #0ff, 0 0 60px #0ff, 0 0 70px #0ff;
     }
 
     .subtitulo {
       font-size: 1.5em;
-      color: black;
+      color: #ff0;
+      text-shadow: 0 0 10px #ff0, 0 0 20px #ff0, 0 0 30px #ff0, 0 0 40px #ff0, 0 0 50px #ff0, 0 0 60px #ff0, 0 0 70px #ff0;
+      animation: colorChange 3s infinite;
     }
 
-    .neon {
-      text-shadow: 0 0 10px #fff, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00, 0 0 60px #00ff00, 0 0 70px #00ff00;
+    @keyframes zoomInOut {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+    }
+
+    @keyframes colorChange {
+      0%, 100% {
+        color: #ff0;
+      }
+      50% {
+        color: #fff;
+      }
     }
 
     .pasarela {
@@ -97,8 +113,9 @@
       padding: 50px 0;
     }
 
-    .video-recuadro video {
-      max-width: 100%;
+    .video-recuadro iframe {
+      width: 560px;
+      height: 315px;
     }
 
     .descripcion {
@@ -162,14 +179,14 @@
 </head>
 <body>
   <div class="banner">
-    <h1 class="titulo-grande zoom">Tienda deportiva Maroska</h1>
-    <h2 class="subtitulo neon">Camisetas tenis y ropa deportiva al mejor precio</h2>
+    <h1 class="titulo-grande">Tienda deportiva Maroska</h1>
+    <h2 class="subtitulo">Camisetas, tenis y ropa deportiva al mejor precio</h2>
   </div>
 
   <div class="pasarela">
-    <img src="https://github.com/VentasMarosk/RopaDeportiva/blob/b57d331a5cb961d9477b2999ab45d8211fc43249/IMG-20240316-WA0083.jpg" alt="Imagen 1">
-    <img src="https://github.com/VentasMarosk/RopaDeportiva/blob/b57d331a5cb961d9477b2999ab45d8211fc43249/IMG-20240316-WA0078.jpg" alt="Imagen 2">
-    <img src="https://github.com/VentasMarosk/RopaDeportiva/blob/b57d331a5cb961d9477b2999ab45d8211fc43249/IMG-20240316-WA0075.jpg" alt="Imagen 3">
+    <img src="https://i.imgur.com/Ark7Aam.jpg" alt="Imagen 1">
+    <img src="https://i.imgur.com/Ark7Aam.jpg" alt="Imagen 2">
+    <img src="https://i.imgur.com/Ark7Aam.jpg" alt="Imagen 3">
   </div>
 
   <div class="ofertas">
@@ -179,102 +196,93 @@
   <div class="pasarela-izquierda-derecha">
     <div class="carousel" id="carousel">
       <div class="item">
-        <img src="https://github.com/VentasMarosk/RopaDeportiva/blob/27804829223b400b720bfcb24c3b9ad988a9cc45/bwhbw.jfif" alt="Imagen 1">
+        <img src="https://i.imgur.com/Ark7Aam.jpg" alt="Imagen 1">
         <p>Chaqueta Deportiva 1</p>
       </div>
       <div class="item">
-        <img src="https://github.com/VentasMarosk/RopaDeportiva/blob/27804829223b400b720bfcb24c3b9ad988a9cc45/jej.jfif" alt="Imagen 2">
+        <img src="https://i.imgur.com/Ark7Aam.jpg" alt="Imagen 2"> 
         <p>Chaqueta Deportiva 2</p>
       </div>
       <div class="item">
-        <img src="https://github.com/VentasMarosk/RopaDeportiva/blob/27804829223b400b720bfcb24c3b9ad988a9cc45/jejh.jfif" alt="Imagen 3">
+        <img src="https://i.imgur.com/Ark7Aam.jpg" alt="Imagen 3">
         <p>Chaqueta Deportiva 3</p>
       </div>
       <div class="item">
-        <img src="https://github.com/VentasMarosk/RopaDeportiva/blob/27804829223b400b720bfcb24c3b9ad988a9cc45/jkwjd.jfif" alt="Imagen 4">
+        <img src="https://i.imgur.com/Ark7Aam.jpg" alt="Imagen 4">
         <p>Chaqueta Deportiva 4</p>
       </div>
       <div class="item">
-        <img src="https://github.com/VentasMarosk/RopaDeportiva/blob/27804829223b400b720bfcb24c3b9ad988a9cc45/ksksk.jfif" alt="Imagen 5">
+        <img src="https://i.imgur.com/Ark7Aam.jpg" alt="Imagen 5">
         <p>Chaqueta Deportiva 5</p>
       </div>
       <div class="item">
-        <img src="https://github.com/VentasMarosk/RopaDeportiva/blob/27804829223b400b720bfcb24c3b9ad988a9cc45/mmdd.jfif" alt="Imagen 6">
+        <img src="https://i.imgur.com/Ark7Aam.jpg" alt="Imagen 6">
         <p>Chaqueta Deportiva 6</p>
       </div>
       <div class="item">
-        <img src="https://github.com/VentasMarosk/RopaDeportiva/blob/27804829223b400b720bfcb24c3b9ad988a9cc45/nwnw.jfif" alt="Imagen 7">
+        <img src="https://i.imgur.com/Ark7Aam.jpg" alt="Imagen 7">
         <p>Chaqueta Deportiva 7</p>
       </div>
       <div class="item">
-        <img src="https://github.com/VentasMarosk/RopaDeportiva/blob/27804829223b400b720bfcb24c3b9ad988a9cc45/weww.jfif" alt="Imagen 8">
+        <img src="https://i.imgur.com/Ark7Aam.jpg" alt="Imagen 8">
         <p>Chaqueta Deportiva 8</p>
       </div>
     </div>
   </div>
 
   <div class="video-recuadro">
-    <video autoplay loop muted>
-      <source src="https://github.com/VentasMarosk/RopaDeportiva/blob/efe36564834aeab7011579befd2e39c1f291c08f/WhatsApp%20Video%202024-07-05%20at%209.58.21%20PM.mp4" type="video/mp4">
-      Tu navegador no soporta video HTML5.
-    </video>
+    <div style="padding:56.25% 0 0 0;position:relative;">
+      <iframe src="https://player.vimeo.com/video/978758238?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Rosendo con Maroska"></iframe>
+    </div>
+    <script src="https://player.vimeo.com/api/player.js"></script>
   </div>
 
   <div class="descripcion">
-    <h2>Cómo llegar</h2>
-    <p>Encuentra nuestra tienda en la siguiente dirección:</p>
-    <p>Calle 9 N 21-49, Bogotá, Colombia</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque leo ut tortor sodales, nec scelerisque elit condimentum. Suspendisse potenti.</p>
   </div>
 
   <div class="mapa">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.138289591222!2d-74.0868521847617!3d4.602078543669813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9b51a00b771b%3A0x203e5361ed24f65a!2sCra.%209%20%2318-49%2C%20Bogot%C3%A1%2C%20Colombia!5e0!3m2!1sen!2s!4v1628168635997!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-  </div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126717.53675829884!2d-77.08308407375561!3d38.91722210484606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b9b3a30f4b05%3A0x9e0f4b2b3a89e7b3!2sWashington%20D.C.%2C%20EE.%20UU.!5e0!3m2!1ses!2sec!4v1626874891021!5m2!1ses!2sec" width="600" height="450" style
 
-  <div class="additional-images">
-    <img src="https://github.com/VentasMarosk/RopaDeportiva/blob/efe36564834aeab7011579befd2e39c1f291c08f/WhatsApp%20Image%202024-07-05%20at%2010.18.19%20PM%20(1).jpeg" alt="Imagen 1">
-    <img src="https://github.com/VentasMarosk/RopaDeportiva/blob/efe36564834aeab7011579befd2e39c1f291c08f/WhatsApp%20Image%202024-07-05%20at%2010.18.19%20PM%20(1).jpeg" alt="Imagen 2">
-    <img src="https://github.com/VentasMarosk/RopaDeportiva/blob/efe36564834aeab7011579befd2e39c1f291c08f/WhatsApp%20Image%202024-07-05%20at%2010.18.19%20PM.jpeg" alt="Imagen 3">
+
+  <div class="mapa">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126717.53675829884!2d-77.08308407375561!3d38.91722210484606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b9b3a30f4b05%3A0x9e0f4b2b3a89e7b3!2sWashington%20D.C.%2C%20EE.%20UU.!5e0!3m2!1ses!2sec!4v1626874891021!5m2!1ses!2sec" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
   </div>
 
   <div class="buttons">
-    <a class="fundacion" href="#">Apóyanos con la Fundación Maroska</a>
-    <a class="whatsapp" href="https://wa.me/3165654053" target="_blank">Contáctanos por WhatsApp</a>
-    <a class="facebook" href="#">Visítanos en Facebook</a>
+    <a href="https://www.whatsapp.com" class="whatsapp">Contáctanos en WhatsApp</a>
+    <a href="https://www.facebook.com" class="facebook">Síguenos en Facebook</a>
+    <a href="https://www.fundacion.com" class="fundacion">Visita nuestra fundación</a>
+  </div>
+
+  <div class="additional-images">
+    <img src="https://imgur.com/Ark7Aam.jpg" alt="Imagen adicional 1">
+    <img src="https://imgur.com/Ark7Aam.jpg" alt="Imagen adicional 2">
+    <img src="https://imgur.com/Ark7Aam.jpg" alt="Imagen adicional 3">
   </div>
 
   <script>
-    // Script para controlar el carrusel de imágenes
-    const carousel = document.getElementById('carousel');
-    const items = carousel.querySelectorAll('.item');
     let currentIndex = 0;
+    const items = document.querySelectorAll('.carousel .item');
+    const totalItems = items.length;
 
-    function showItem(index) {
-      items.forEach((item, idx) => {
-        if (idx === index) {
-          item.style.display = 'block';
-        } else {
-          item.style.display = 'none';
-        }
-      });
+    function showNext() {
+      items[currentIndex].classList.remove('visible');
+      currentIndex = (currentIndex + 1) % totalItems;
+      items[currentIndex].classList.add('visible');
     }
 
-    function nextItem() {
-      currentIndex++;
-      if (currentIndex >= items.length) {
-        currentIndex = 0;
-      }
-      showItem(currentIndex);
+    function showPrev() {
+      items[currentIndex].classList.remove('visible');
+      currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+      items[currentIndex].classList.add('visible');
     }
 
-    function prevItem() {
-      currentIndex--;
-      if (currentIndex < 0) {
-        currentIndex = items.length - 1;
-      }
-      showItem(currentIndex);
-    }
+    document.querySelector('.controls .next').addEventListener('click', showNext);
+    document.querySelector('.controls .prev').addEventListener('click', showPrev);
 
-    setInterval(nextItem, 3000); // Cambiar imagen cada 3 segundos
+    items[currentIndex].classList.add('visible');
   </script>
 </body>
 </html>
+
