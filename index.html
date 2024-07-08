@@ -9,171 +9,261 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: black;
+      background-color: #000;
+      color: #fff;
+      text-align: center;
     }
 
     .banner {
-      text-align: center;
       padding: 50px 0;
     }
 
     .titulo-grande {
       font-size: 3em;
-      color: #0ff;
-      animation: zoomInOut 3s infinite;
-      text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff, 0 0 40px #0ff, 0 0 50px #0ff, 0 0 60px #0ff, 0 0 70px #0ff;
+      color: #fff;
+      display: inline-block;
+      animation: zoomEffect 2s infinite, shadowEffect 2s infinite;
+      text-shadow: 0 0 10px #808080;
     }
 
-    .subtitulo {
-      font-size: 1.5em;
-      color: #ff0;
-      text-shadow: 0 0 10px #ff0, 0 0 20px #ff0, 0 0 30px #ff0, 0 0 40px #ff0, 0 0 50px #ff0, 0 0 60px #ff0, 0 0 70px #ff0;
-      animation: colorChange 3s infinite;
-    }
-
-    @keyframes zoomInOut {
+    @keyframes zoomEffect {
       0%, 100% {
         transform: scale(1);
       }
       50% {
-        transform: scale(1.2);
+        transform: scale(1.1);
       }
     }
 
-    @keyframes colorChange {
+    @keyframes shadowEffect {
       0%, 100% {
-        color: #ff0;
+        text-shadow: 0 0 10px #808080, 0 0 20px #808080, 0 0 30px #808080;
       }
       50% {
-        color: #fff;
+        text-shadow: 0 0 20px #808080, 0 0 30px #808080, 0 0 40px #808080;
       }
     }
 
-    .pasarela {
+    .subtitulo {
+      font-size: 1.5em;
+      color: #00ff00;
+      padding: 5px;
+      display: inline-block;
+      animation: zoomEffect 2s infinite, shadowEffectGreen 2s infinite;
+      text-shadow: 0 0 10px #00ff00;
+    }
+
+    @keyframes shadowEffectGreen {
+      0%, 100% {
+        text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+      }
+      50% {
+        text-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00;
+      }
+    }
+
+    .motivacion {
+      font-size: 1.2em;
+      margin: 20px 0;
+      color: #ff4500;
+      text-shadow: 0 0 10px #ff4500, 0 0 20px #ff4500;
+    }
+
+    .pasarela-container {
+      position: relative;
+      max-width: 100%;
+      margin: auto;
+      overflow: hidden;
       display: flex;
       justify-content: center;
-      gap: 20px;
-      padding: 20px;
+      align-items: center;
+    }
+
+    .pasarela-slider {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
     }
 
     .pasarela img {
-      max-width: 300px;
+      flex: 0 0 auto;
+      max-width: 100%;
       height: auto;
-    }
-
-    .ofertas {
-      text-align: center;
-      padding: 50px 0;
-    }
-
-    .pasarela-izquierda-derecha {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px;
-      overflow-x: auto;
-      gap: 20px;
-      scrollbar-width: none; /* Firefox */
-      -ms-overflow-style: none; /* IE 10+ */
-    }
-
-    .pasarela-izquierda-derecha::-webkit-scrollbar {
-      display: none; /* Safari and Chrome */
-    }
-
-    .carousel {
-      display: flex;
-      overflow: hidden;
-      width: 100%;
-    }
-
-    .carousel img {
-      max-width: 200px;
-      height: auto;
-      transition: transform 0.5s;
-    }
-
-    .carousel .item {
-      min-width: 200px;
+      max-height: 200px; /* Ajustar altura máxima */
+      border: 2px solid #fff;
+      box-shadow: 0 0 10px #ff4500;
       margin: 0 10px;
     }
 
-    .controls {
-      text-align: center;
-      margin: 20px 0;
+    .btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(255, 255, 255, 0.5);
+      border: none;
+      font-size: 2em;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 50%;
     }
 
-    .controls button {
-      padding: 10px 20px;
-      margin: 5px;
+    .btn-prev {
+      left: 10px;
     }
 
-    .video-recuadro {
-      text-align: center;
-      padding: 50px 0;
+    .btn-next {
+      right: 10px;
     }
 
-    .video-recuadro iframe {
-      width: 560px;
-      height: 315px;
-    }
-
-    .descripcion {
-      text-align: center;
-      padding: 50px 0;
-    }
-
-    .mapa {
-      text-align: center;
-      padding: 20px 0;
-    }
-
-    .mapa iframe {
-      width: 100%;
-      height: 400px;
-      border: 0;
-    }
-
-    .buttons {
-      text-align: center;
-      padding: 20px 0;
-    }
-
-    .buttons a {
-      padding: 10px 20px;
-      margin: 5px;
-      display: inline-block;
-      text-decoration: none;
-      color: white;
-    }
-
-    .buttons .fundacion {
-      background-color: #ff8800;
-    }
-
-    .buttons .whatsapp {
-      background-color: #25d366;
-    }
-
-    .buttons .facebook {
-      background-color: #3b5998;
-    }
-
-    .additional-images {
+    .galeria {
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
       gap: 20px;
       padding: 20px;
     }
 
-    .additional-images img {
-      max-width: 200px;
-      height: auto;
-      transition: transform 0.5s;
+    .galeria-item {
+      text-align: center;
     }
 
-    .additional-images img:hover {
+    .galeria img {
+      max-width: 200px;
+      height: auto;
+      border: 2px solid #fff;
+      box-shadow: 0 0 10px #ff4500;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .galeria img:hover {
       transform: scale(1.1);
+      box-shadow: 0 0 20px #ff4500;
+    }
+
+    .galeria .descripcion {
+      text-align: center;
+      color: #fff;
+    }
+
+    .camisetas {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .camisetas-item {
+      text-align: center;
+    }
+
+    .camisetas img {
+      max-width: 150px;
+      height: auto;
+      border: 2px solid #fff;
+      box-shadow: 0 0 10px #ff4500;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .camisetas img:hover {
+      transform: scale(1.2);
+      box-shadow: 0 0 20px #ff4500;
+    }
+
+    .camisetas .descripcion {
+      text-align: center;
+      color: #fff;
+    }
+
+    .video-recuadro {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 50px 0;
+    }
+
+    .video-recuadro video {
+      border: 2px solid #fff;
+      box-shadow: 0 0 10px #ff4500;
+      width: 45%;
+      height: auto;
+    }
+
+    .contenido-final {
+      margin: 50px 0;
+      padding: 20px;
+      background: #1a1a1a;
+      color: #fff;
+      box-shadow: 0 0 10px #ff4500;
+    }
+
+    .btn-contact {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      color: #fff;
+      background-color: #25d366;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 1.2em;
+      box-shadow: 0 0 10px #ff4500;
+    }
+
+    .btn-contact.facebook {
+      background-color: #4267B2;
+    }
+
+    .btn-contact.instagram {
+      background-color: #E1306C;
+    }
+
+    .ubicacion {
+      padding: 20px;
+      margin: 20px 0;
+      background: #1a1a1a;
+      color: #fff;
+      box-shadow: 0 0 10px #ff4500;
+    }
+
+    .ubicacion img {
+      max-width: 300px;
+      height: auto;
+      border: 2px solid #fff;
+      box-shadow: 0 0 10px #ff4500;
+    }
+
+    .btn-whatsapp {
+      position: fixed;
+      bottom: 70px;
+      right: 20px;
+      background-color: rgba(37, 211, 102, 0.7);
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 1.2em;
+      box-shadow: 0 0 10px #ff4500;
+      z-index: 1000;
+      transition: background-color 0.3s, transform 0.3s;
+      animation: btnEffect 2s infinite;
+    }
+
+    .btn-whatsapp:hover {
+      background-color: rgba(37, 211, 102, 1);
+      transform: scale(1.1);
+    }
+
+    @keyframes btnEffect {
+      0%, 100% {
+        transform: scale(1);
+        background-color: rgba(37, 211, 102, 0.7);
+      }
+      50% {
+        transform: scale(1.1);
+        background-color: rgba(37, 211, 102, 1);
+      }
     }
   </style>
 </head>
@@ -181,107 +271,106 @@
   <div class="banner">
     <h1 class="titulo-grande">Tienda deportiva Maroska</h1>
     <h2 class="subtitulo">Camisetas, tenis y ropa deportiva al mejor precio</h2>
+    <p class="motivacion">¡Ven y descubre las mejores ofertas en ropa deportiva! La calidad y el estilo que buscas, solo en Maroska.</p>
+    <div class="pasarela-container">
+      <div class="pasarela-slider">
+        <img src="https://github.com/VentasMarosk/Maroska/blob/725edcca27f3f9db3b60131443ff771998918950/nsjdjsdb.png?raw=true" alt="Imagen 1">
+        <img src="https://github.com/VentasMarosk/Maroska/blob/725edcca27f3f9db3b60131443ff771998918950/sdsd.jpg?raw=true" alt="Imagen 2">
+        <img src="https://github.com/VentasMarosk/Maroska/blob/0f29d33ec55bcfce14e4a870798aea58094ce70d/1.png?raw=true" alt="Imagen 3">
+      </div>
+      <button class="btn btn-prev" onclick="moverSlide(-1)">&#10094;</button>
+      <button class="btn btn-next" onclick="moverSlide(1)">&#10095;</button>
+    </div>
   </div>
 
-  <div class="pasarela">
-    <img src="https://i.imgur.com/Ark7Aam.jpg" alt="Imagen 1">
-    <img src="https://i.imgur.com/Ark7Aam.jpg" alt="Imagen 2">
-    <img src="https://i.imgur.com/Ark7Aam.jpg" alt="Imagen 3">
+  <div class="galeria">
+    <div class="galeria-item">
+      <img src="https://github.com/VentasMarosk/Maroska/blob/d1ebb3de94a98f6d3b34c33cc0b78c551c7d9d69/bbbn.jpg?raw=true" alt="Producto 1">
+      <p class="descripcion">Alta calidad y durabilidad. ¡Compra ahora!</p>
+    </div>
+    <div class="galeria-item">
+      <img src="https://github.com/VentasMarosk/Maroska/blob/d871356ae31e91d3f5958e6f8b2252bb4c9739ca/smdsamd.jpg?raw=true" alt="Producto 2">
+      <p class="descripcion">Estilo y comodidad garantizados. ¡Compra ya!</p>
+    </div>
   </div>
 
-  <div class="ofertas">
-    <h1 class="titulo-grande">SOLO OFERTAS EN MAROSKA</h1>
-  </div>
-
-  <div class="pasarela-izquierda-derecha">
-    <div class="carousel" id="carousel">
-      <div class="item">
-        <img src="https://i.imgur.com/Ark7Aam.jpg" alt="Imagen 1">
-        <p>Chaqueta Deportiva 1</p>
-      </div>
-      <div class="item">
-        <img src="https://i.imgur.com/Ark7Aam.jpg" alt="Imagen 2"> 
-        <p>Chaqueta Deportiva 2</p>
-      </div>
-      <div class="item">
-        <img src="https://i.imgur.com/Ark7Aam.jpg" alt="Imagen 3">
-        <p>Chaqueta Deportiva 3</p>
-      </div>
-      <div class="item">
-        <img src="https://i.imgur.com/Ark7Aam.jpg" alt="Imagen 4">
-        <p>Chaqueta Deportiva 4</p>
-      </div>
-      <div class="item">
-        <img src="https://i.imgur.com/Ark7Aam.jpg" alt="Imagen 5">
-        <p>Chaqueta Deportiva 5</p>
-      </div>
-      <div class="item">
-        <img src="https://i.imgur.com/Ark7Aam.jpg" alt="Imagen 6">
-        <p>Chaqueta Deportiva 6</p>
-      </div>
-      <div class="item">
-        <img src="https://i.imgur.com/Ark7Aam.jpg" alt="Imagen 7">
-        <p>Chaqueta Deportiva 7</p>
-      </div>
-      <div class="item">
-        <img src="https://i.imgur.com/Ark7Aam.jpg" alt="Imagen 8">
-        <p>Chaqueta Deportiva 8</p>
-      </div>
+  <div class="camisetas">
+    <div class="camisetas-item">
+      <img src="https://github.com/VentasMarosk/Maroska/blob/cdc135d7f8383664f8a3b2a029856c6404a8b4a1/bwhbw.jpg?raw=true" alt="Camiseta 1">
+      <p class="descripcion">Cómoda y estilizada. ¡Compra ya!</p>
+    </div>
+    <div class="camisetas-item">
+      <img src="https://github.com/VentasMarosk/Maroska/blob/cdc135d7f8383664f8a3b2a029856c6404a8b4a1/jej.jpg?raw=true" alt="Camiseta 2">
+      <p class="descripcion">Ideal para correr y mantenerte fresco. ¡Compra ahora!</p>
+    </div>
+    <div class="camisetas-item">
+      <img src="https://github.com/VentasMarosk/Maroska/blob/cdc135d7f8383664f8a3b2a029856c6404a8b4a1/hejhje.jpg?raw=true" alt="Camiseta 3">
+      <p class="descripcion">Perfecta para tus entrenamientos diarios. ¡Haz tu pedido hoy!</p>
+    </div>
+    <div class="camisetas-item">
+      <img src="https://github.com/VentasMarosk/Maroska/blob/cdc135d7f8383664f8a3b2a029856c6404a8b4a1/jjkw.jpg?raw=true" alt="Camiseta 4">
+      <p class="descripcion">La mejor calidad al mejor precio. ¡Disponible ahora!</p>
     </div>
   </div>
 
   <div class="video-recuadro">
-    <div style="padding:56.25% 0 0 0;position:relative;">
-      <iframe src="https://player.vimeo.com/video/978758238?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Rosendo con Maroska"></iframe>
-    </div>
-    <script src="https://player.vimeo.com/api/player.js"></script>
+    <video src="https://github.com/VentasMarosk/Maroska/blob/b7055fb7085bf45156abbfb288a1a1afed8cc777/WhatsApp-Video-2024-07-05-at-9.58.21-PM%20(1).webm?raw=true" controls></video>
+    <video src="https://github.com/VentasMarosk/Maroska/blob/b7055fb7085bf45156abbfb288a1a1afed8cc777/WhatsApp-Video-2024-07-05-at-9.58.21-PM%20(1).webm?raw=true" controls></video>
   </div>
 
-  <div class="descripcion">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque leo ut tortor sodales, nec scelerisque elit condimentum. Suspendisse potenti.</p>
+  <div class="contenido-final">
+    <h2>¿Por qué comprar en Maroska?</h2>
+    <p>En Tienda deportiva Maroska nos dedicamos a ofrecer la mejor calidad en ropa deportiva desde hace más de 10 años. Nuestros clientes siempre regresan debido a nuestro compromiso con la excelencia y la satisfacción del cliente.</p>
+    <p>Nuestros productos están hechos de materiales de alta calidad que garantizan durabilidad y comodidad. Además, contamos con un equipo de expertos que seleccionan cuidadosamente cada prenda para asegurarse de que cumpla con nuestros estrictos estándares de calidad.</p>
+    <p>Visítanos hoy y descubre por qué somos la tienda de deportes preferida en la región. ¡Te esperamos!</p>
+
+    <a href="https://wa.me/3165654053" class="btn-contact">WhatsApp</a>
+    <a href="https://www.facebook.com" class="btn-contact facebook">Síguenos en Facebook</a>
+    <a href="https://www.instagram.com" class="btn-contact instagram">Síguenos en Instagram</a>
   </div>
 
-  <div class="mapa">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126717.53675829884!2d-77.08308407375561!3d38.91722210484606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b9b3a30f4b05%3A0x9e0f4b2b3a89e7b3!2sWashington%20D.C.%2C%20EE.%20UU.!5e0!3m2!1ses!2sec!4v1626874891021!5m2!1ses!2sec" width="600" height="450" style
-
-
-  <div class="mapa">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126717.53675829884!2d-77.08308407375561!3d38.91722210484606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b9b3a30f4b05%3A0x9e0f4b2b3a89e7b3!2sWashington%20D.C.%2C%20EE.%20UU.!5e0!3m2!1ses!2sec!4v1626874891021!5m2!1ses!2sec" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  <div class="ubicacion">
+    <h2>Ubicación</h2>
+    <p>Bogotá, San andresito, Calle 9 N 21-49</p>
+    <img src="https://github.com/VentasMarosk/Maroska/blob/98bdc2184d3456dda56683be28f2576a3f5ad4a4/1.jpeg?raw=true" alt="Ubicación Maroska">
   </div>
 
-  <div class="buttons">
-    <a href="https://www.whatsapp.com" class="whatsapp">Contáctanos en WhatsApp</a>
-    <a href="https://www.facebook.com" class="facebook">Síguenos en Facebook</a>
-    <a href="https://www.fundacion.com" class="fundacion">Visita nuestra fundación</a>
-  </div>
-
-  <div class="additional-images">
-    <img src="https://imgur.com/Ark7Aam.jpg" alt="Imagen adicional 1">
-    <img src="https://imgur.com/Ark7Aam.jpg" alt="Imagen adicional 2">
-    <img src="https://imgur.com/Ark7Aam.jpg" alt="Imagen adicional 3">
-  </div>
+  <a href="https://wa.me/3165654053" class="btn-whatsapp">Comunícate ahora</a>
 
   <script>
-    let currentIndex = 0;
-    const items = document.querySelectorAll('.carousel .item');
-    const totalItems = items.length;
+    let slideIndex = 0;
+    showSlides();
 
-    function showNext() {
-      items[currentIndex].classList.remove('visible');
-      currentIndex = (currentIndex + 1) % totalItems;
-      items[currentIndex].classList.add('visible');
+    function showSlides() {
+      let slides = document.querySelectorAll('.pasarela-slider img');
+      slides.forEach((slide, index) => {
+        slide.style.display = 'none';
+      });
+      slideIndex++;
+      if (slideIndex > slides.length) {
+        slideIndex = 1;
+      }
+      if (slideIndex < 1) {
+        slideIndex = slides.length;
+      }
+      slides[slideIndex - 1].style.display = 'block';
+      setTimeout(showSlides, 2000); // Cambia cada 2 segundos
     }
 
-    function showPrev() {
-      items[currentIndex].classList.remove('visible');
-      currentIndex = (currentIndex - 1 + totalItems) % totalItems;
-      items[currentIndex].classList.add('visible');
+    function moverSlide(n) {
+      let slides = document.querySelectorAll('.pasarela-slider img');
+      slides.forEach((slide, index) => {
+        slide.style.display = 'none';
+      });
+      slideIndex += n;
+      if (slideIndex > slides.length) {
+        slideIndex = 1;
+      }
+      if (slideIndex < 1) {
+        slideIndex = slides.length;
+      }
+      slides[slideIndex - 1].style.display = 'block';
     }
-
-    document.querySelector('.controls .next').addEventListener('click', showNext);
-    document.querySelector('.controls .prev').addEventListener('click', showPrev);
-
-    items[currentIndex].classList.add('visible');
   </script>
 </body>
 </html>
